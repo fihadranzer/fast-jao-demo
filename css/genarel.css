@@ -1,0 +1,90 @@
+/* REUSABLE CSS IS HERE  */
+:root {
+  --main-color: #ff4800;
+  --white: #fff;
+  --blue-font-color: #03324d;
+}
+.container {
+  max-width: 120rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.container-second {
+  max-width: 115rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.title {
+  font-size: 4.3rem;
+  font-weight: 700;
+  color: var(--blue-font-color);
+}
+
+.title-2 {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: var(--blue-font-color);
+  line-height: 5.4rem;
+}
+
+.main-title {
+  font-size: 6.8rem;
+  font-weight: 900;
+}
+
+.grid-columns-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.grid-columns-odd {
+  display: grid;
+  grid-template-columns: 1fr 1fr 2fr;
+  gap: 3rem;
+}
+
+.title-medium {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+}
+
+.normal-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2.8rem;
+}
+
+.on-time-description {
+  color: white;
+}
+
+.image-animation {
+  position: absolute;
+  left: 4rem;
+  top: 20rem;
+  opacity: 0.5;
+  animation: zoom-in-zoom-out 3s ease-in-out infinite;
+}
+
+/*****************************/
+/* Animation start here  */
+/*****************************/
+
+@keyframes zoom-in-zoom-out {
+  0% {
+    transform: scale(0.9, 0.9);
+  }
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+  100% {
+    transform: scale(0.9, 0.9);
+  }
+}
+
+/*****************************/
+/* Animation Ends here  */
+/*****************************/
