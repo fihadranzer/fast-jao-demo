@@ -522,10 +522,13 @@ body {
 /* CARD_SERVICE  PANEL START  */
 
 .card-service-section {
-  padding-bottom: 200px;
-  position: relative;
+  height: 100vh;
 }
 
+.section-postion-add {
+  position: relative;
+  padding-bottom: 20rem;
+}
 .section-content-area {
   position: absolute;
   top: -60%;
@@ -634,8 +637,6 @@ body {
   transition: 0.6s linear;
 }
 
-
-
 .card-content::before {
   position: absolute;
   content: url("../images/globe.png");
@@ -647,15 +648,12 @@ body {
   transition: all 400ms ease-out 0s;
 }
 
-
-
-
-
 .card-box:hover .card-content::before {
   transform: scale(1.3) rotate(180deg);
 }
 
 .just-click {
+  display: block;
   text-align: center;
   padding: 7rem 0;
   font-size: 1.8rem;
@@ -668,4 +666,324 @@ body {
   color: #ff4800;
 }
 /* CARD_SERVICE  PANEL END  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* QOUTE SERVICE  PANEL START  */
+
+.section-qoute {
+  position: relative;
+  margin-top: 4rem;
+  height: 90vh;
+  background-color: #03324d;
+  background: url("../images/sliderone.jpg");
+  max-width: 100%;
+}
+
+.section-qoute::before {
+  content: url("../images/person1.png");
+  position: absolute;
+  position: absolute;
+  right: 1rem;
+  height: 100px;
+  animation: animation-up-down 4s ease-in-out infinite;
+}
+
+.qoute-left-content {
+  position: relative;
+}
+
+.form-box {
+  position: absolute;
+  background-color: #fff;
+  padding: 4.5rem 5rem 5rem 5rem;
+  box-shadow: -5px -1px 15px 10px rgb(38 37 37 / 10%);
+  border-radius: 8px;
+  top: -12rem;
+}
+
+.form-title {
+  position: relative;
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 54px;
+  color: #03324d;
+}
+
+.form-title::before {
+  content: "";
+  position: absolute;
+  height: 5.6rem;
+  width: 1rem;
+  background-color: #ff4800;
+  top: 0;
+  left: -5rem;
+}
+
+.qoute-form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.form-control {
+  border: 1px solid #dfdce6;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 1.25rem 1rem;
+  min-width: 100%;
+  height: 5rem;
+  border-radius: 0.5rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  outline: none;
+}
+
+#form-selection {
+  height: 7rem;
+}
+#form-selection:focus {
+  border: 1px solid #dfdce6;
+  height: 7rem;
+}
+
+.form-control:focus {
+  border-color: #e41f7a;
+}
+
+.form-btn {
+  display: inline-block;
+  background-color: #ff4800;
+  border: none;
+  padding: 1rem 2.7rem;
+  font-size: 1.4rem;
+  line-height: 26px;
+  font-weight: 500;
+  border-radius: 5px;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.form-btn:hover {
+  background-color: #03324d;
+}
+
+.quad-box {
+  text-align: center;
+  gap: 3rem;
+  padding-top: 15rem;
+  justify-content: center;
+  margin: 0 2rem;
+}
+.qoute-service-box {
+  background-color: #f3f1f2;
+  border-radius: 8px;
+  padding: 4rem;
+  cursor: pointer;
+  position: relative;
+  transition: all 400ms ease-out 0s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.qoute-service-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 8px;
+  background-color: #ff4800;
+  width: 0%;
+  transition: all 400ms ease-out 0s;
+}
+
+.qoute-service-box:hover::after {
+  width: 100%;
+}
+
+.qoute-service-box::before {
+  content: url("../images/delivery.png");
+  position: absolute;
+  bottom: -20%;
+  right: 30%;
+  opacity: 0.2;
+  z-index: -1;
+  transition: all 400ms ease-out 0s;
+}
+
+.qoute-service-box:hover::before {
+  transform: scale(1.3);
+}
+
+.qoute-service-box-globe::before {
+  content: url("../images/globe-new.png");
+  position: absolute;
+  bottom: -20%;
+  right: 30%;
+  opacity: 0.2;
+  z-index: -1;
+  transition: all 400ms ease-out 0s;
+}
+
+.qoute-service-box-globe:hover:before {
+  transform: scale(1.3);
+}
+
+.qoute-service-box-building::before {
+  content: url("../images/building.png");
+  position: absolute;
+  bottom: -20%;
+  right: 30%;
+  opacity: 0.2;
+  z-index: -1;
+  transition: all 400ms ease-out 0s;
+}
+
+.qoute-service-box-building:hover:before {
+  transform: scale(1.3);
+}
+
+.qoute-service-box-clients::before {
+  content: url("../images/support.png");
+  position: absolute;
+  bottom: -20%;
+  right: 30%;
+  opacity: 0.2;
+  z-index: -1;
+  transition: all 400ms ease-out 0s;
+}
+
+.qoute-service-box-clients:hover:before {
+  transform: scale(1.3);
+}
+
+.qoute-service-box-title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  line-height: 54px;
+  color: #ff4800;
+}
+
+.qoute-service-box-sub-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #747b87;
+}
+/*********************************/
+/*********************************/
+/* Animation Musk Delivery boy */
+
+@keyframes animation-up-down {
+  0% {
+    top: -17rem;
+  }
+  50% {
+    top: -20rem;
+  }
+  100% {
+    top: -17rem;
+  }
+}
+/* Animation Musk Delivery boy */
+/*********************************/
+/*********************************/
+
+/* QOUTE SERVICE  PANEL END  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* TEAM MEMBER  PANEL START  */
+
+.section-team-member {
+  display: flex;
+  justify-content: right;
+}
+
+.content-box-member {
+  padding: 11rem 0 10rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.left-member-content {
+  display: block;
+  text-align: right;
+  max-width: 36rem;
+}
+
+.member-sm-title {
+  font-size: 1.6rem;
+  color: #ff4800;
+  font-weight: 600;
+}
+
+.member-lg-title {
+  font-size: 4.2rem;
+  color: #03324d;
+  font-weight: 800;
+  line-height: 54px;
+}
+
+.right-member-content {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 28.8px;
+}
+
+.right-member-description {
+  text-align: left;
+  max-width: 55rem;
+  margin-right: 11.2rem;
+  color: #3e3e3e;
+}
+
+.hr-space-member {
+  height: 8rem;
+  width: 1rem;
+  background-color: #ff4800;
+  border-radius: 50px;
+  margin: 0 6rem;
+}
+
+.team-member-card{
+  gap: 3rem;
+}
+.team-member-card-box {
+  text-align: center;
+  background-color: #F8F8F8;
+}
+
+
+.team-member-image{
+  width: 100%;
+}
+.team-member-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 32px;
+  color: #03324d;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+
+.team-member-content {
+  padding: 2.5rem 0;
+}
+
+.team-member-name:hover {
+  color: #ff4800;
+}
+
+.team-member-designation {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 26px;
+  color: #858585;
+  padding: 0.5rem;
+}
+/* TEAM MEMBER  PANEL END  */
 /* ***************************************** */

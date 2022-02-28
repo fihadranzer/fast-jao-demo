@@ -43,6 +43,11 @@
   grid-template-columns: 1fr 1fr 1fr;
 }
 
+.grid-columns-odd-2{
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+}
+
 .grid-columns-odd {
   display: grid;
   grid-template-columns: 1fr 1fr 2fr;
@@ -88,6 +93,8 @@
     transform: scale(0.9, 0.9);
   }
 }
+
+
 
 /*****************************/
 /* Animation Ends here  */
