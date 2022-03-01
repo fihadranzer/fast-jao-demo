@@ -897,16 +897,19 @@ body {
 /* ***************************************** */
 /* TEAM MEMBER  PANEL START  */
 
-.section-team-member {
-  display: flex;
-  justify-content: right;
+.section-team-member-main {
+  padding: 10rem 0;
+  background: url("../images/abs-bg2.png");
 }
-
 .content-box-member {
-  padding: 11rem 0 10rem 0;
+  padding: 3rem 0 8rem 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.section-team-member {
+  display: flex;
+  justify-content: right;
 }
 
 .left-member-content {
@@ -949,18 +952,118 @@ body {
   margin: 0 6rem;
 }
 
-.team-member-card{
+.team-member-card {
   gap: 3rem;
 }
+
 .team-member-card-box {
   text-align: center;
-  background-color: #F8F8F8;
+  background-color: #f8f8f8;
+  position: relative;
 }
 
+.team-member-card-box::before {
+  content: "";
+  height: 3px;
+  background-color: #ff4800;
+  bottom: 0;
+  width: 0;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transition: 600ms;
+}
 
-.team-member-image{
+.team-member-card-box::after {
+  content: "";
+  height: 3px;
+  background-color: #ff4800;
+  bottom: 0;
+  width: 40%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transition: 400ms;
+}
+
+.team-member-card-box:hover:after {
+  width: 25%;
+}
+.team-member-card-box:hover:before {
   width: 100%;
 }
+
+.team-member-image-box {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.team-member-image-box .social-list {
+  position: absolute;
+  list-style: none;
+  width: 0;
+  left: 0%;
+  right: 60%;
+  margin: 0 auto;
+  display: flex;
+  z-index: 1;
+  bottom: 3.7rem;
+  transition: 600ms;
+  transform: scaleY(0);
+}
+
+.team-member-card-box:hover .team-member-image-box .social-list {
+  transform: scaleY(1);
+  bottom: 3rem;
+}
+
+.team-member-image-box .social-list li {
+  float: none;
+  margin-right: 1rem;
+}
+
+.social-list a {
+  text-decoration: none;
+  font-size: 2rem;
+  background-color: #f3f1f2;
+  color: #03324d;
+  padding: 0.8rem 1.3rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  transition: all 0.3s ease-out;
+}
+
+.social-list a:hover {
+  background-color: #ff4800;
+  color: #fff;
+}
+
+.team-member-image {
+  width: 100%;
+  height: 100%;
+}
+
+.team-member-image-box::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #03324d;
+  opacity: 0.7;
+  z-index: 0;
+  transition: 500ms;
+  transform: scaleX(0);
+}
+
+.team-member-card-box:hover .team-member-image-box::after {
+  transform: scaleY(1);
+}
+
 .team-member-name {
   font-size: 2.2rem;
   font-weight: 700;
@@ -985,5 +1088,253 @@ body {
   color: #858585;
   padding: 0.5rem;
 }
+
+.clients-logo-banner {
+  display: flex;
+  gap: 3rem;
+}
+
+.clients-logo-banner img {
+  width: 100%;
+}
 /* TEAM MEMBER  PANEL END  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* NEWS & UPDATES   Section START here  */
+
+.section-update-main {
+  background: url("../images/abs-bg3.png");
+  background-color: #03324d;
+}
+
+.update-top-content-box {
+  padding: 7rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.update-title {
+  color: var(--main-color);
+}
+.update-title-2 {
+  color: #fff;
+}
+
+.update-right-content {
+  display: flex;
+  gap: 1rem;
+  margin-right: 18rem;
+  margin-top: 7rem;
+}
+.round-box-arrow i {
+  color: #fff;
+  background-color: #ff4800;
+  border-radius: 50%;
+  padding: 2.25rem 2.5rem;
+  font-size: 1.4rem;
+  transition: all 0.4s ease-out;
+}
+
+.round-box-arrow i:hover {
+  color: #ff4800;
+  background-color: #fff;
+}
+
+.update-card {
+  gap: 0.5rem;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+
+.update-card-box .update-card-box-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.update-card-box-item img {
+  width: 100%;
+  transition: all 900ms ease;
+  transform: scale(1.01);
+}
+
+.update-card-box:hover .update-card-box-item img {
+  transform: scale(1.2) rotate(3deg);
+}
+.update-card-box-icon a {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 6.4rem;
+  height: 6.4rem;
+  text-align: center;
+  background-color: #ff4800;
+  color: #fff;
+  text-decoration: none;
+  font-size: 2rem;
+  line-height: 70px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease-out 0s;
+  z-index: 5;
+}
+.update-card-box:hover .update-card-box-icon a {
+  visibility: visible;
+  opacity: 1;
+  top: 5%;
+  right: 5%;
+  transform: rotateY(180deg);
+}
+
+.update-card-box-category {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 26px;
+  color: #fff;
+}
+
+.update-card-box-Title {
+  font-size: 4.3rem;
+  font-weight: 700;
+  line-height: 53px;
+  color: #fff;
+}
+
+.update-card-box-details {
+  position: absolute;
+  width: 100%;
+  margin: 0 auto;
+  left: 0;
+  bottom: 0;
+  transition: all 500ms ease-out;
+  transform-origin: bottom;
+  z-index: 2;
+  opacity: 0;
+}
+
+.update-card-box:hover .update-card-box-details {
+  opacity: 1;
+  bottom: 2.5rem;
+  left: 3rem;
+  transform: perspective(0) rotateX(0);
+}
+
+.update-card-box-item::after {
+  content: "";
+  position: absolute;
+  background: rgba(3, 50, 77, 0.9);
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: all 500ms ease-out 0s;
+  transform: scale(0);
+}
+.update-card-box:hover .update-card-box-item::after {
+  opacity: 1;
+  transform: scale(0.95);
+}
+
+/* NEWS & UPDATES   Section START here  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* TESTIMONIAL Section START here  */
+
+.section-testimonial {
+  background: url("../images/2.png");
+  padding-bottom: 10rem;
+}
+.testimonial-header {
+  padding: 7.5rem 0;
+  text-align: center;
+}
+
+.testimonial-title-sm {
+  font-size: 1.8rem;
+  font-weight: 600;
+  line-height: 24px;
+  color: #ff4800;
+  padding: 3rem;
+}
+
+.testimonial-title-lg {
+  font-size: 4.2rem;
+  font-weight: 800;
+  line-height: 54px;
+  color: #03324d;
+}
+
+.testimonial-container {
+  display: flex;
+  gap: 3rem;
+}
+
+.testimonial-card {
+  background-color: #fff;
+  border-radius: 1.2rem;
+  text-align: center;
+  padding: 3rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.testimonial-card::before {
+  content: "";
+  background-color: #ff4800;
+  position: absolute;
+  height: 7rem;
+  width: 7rem;
+  right: 0;
+  top: 0;
+  z-index: 1;
+}
+
+
+
+.testimonial-image {
+  border: 3px solid #c1cad5;
+  border-radius: 50%;
+  margin: 3.5rem 0;
+}
+
+.testimonial-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 32px;
+  color: #03324d;
+}
+
+.testimonial-designation {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 26px;
+  color: #a6a4a4;
+}
+
+.rating-star {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+}
+
+.rating-star li i {
+  color: #ff4800;
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.testimonial-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 28px;
+  color: #3e3e3e;
+  padding: 0 6rem;
+  margin-bottom: 3rem;
+}
+
+/* TESTIMONIAL Section END here  */
 /* ***************************************** */

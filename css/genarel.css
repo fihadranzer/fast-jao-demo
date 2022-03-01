@@ -78,6 +78,11 @@
   animation: zoom-in-zoom-out 3s ease-in-out infinite;
 }
 
+.division{
+  margin: 10rem 0;
+  border-top: 1px solid #dee2e6!important;
+}
+
 /*****************************/
 /* Animation start here  */
 /*****************************/
