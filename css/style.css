@@ -1,3 +1,7 @@
+/* Imported Link Start Here  */
+
+/* Imported Link END Here  */
+
 :root {
   --main-color: #ff4800;
   --white: #fff;
@@ -1292,7 +1296,13 @@ body {
   z-index: 1;
 }
 
-
+.testimonial-card::after {
+  content: url("../images/quote.png");
+  position: absolute;
+  right: 1.5rem;
+  top: 1.6rem;
+  z-index: 2;
+}
 
 .testimonial-image {
   border: 3px solid #c1cad5;
@@ -1337,4 +1347,241 @@ body {
 }
 
 /* TESTIMONIAL Section END here  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* CHOOSE US Section START here  */
+
+.choose-us-section {
+  background-image: url("../images/3\ \(1\).jpg");
+  background-color: #03324d;
+  background-position: center center;
+}
+
+.choose-content-box {
+  position: relative;
+  gap: 8rem;
+  padding: 10rem 0;
+}
+
+.choose-content-box::before {
+  content: "";
+  background: #131c34;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.choose-img-left {
+  height: auto;
+  max-width: 100%;
+  animation: leftRifgtInfinite 5s infinite;
+}
+
+.choose-right-content {
+  margin: 2rem 5rem;
+  max-width: 35rem;
+  z-index: 2;
+}
+
+.choose-title-sm {
+  color: #fff;
+}
+
+.choose-right-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 28.8px;
+  color: #fff;
+  padding: 5rem 0;
+}
+
+.video-btn-link {
+  text-decoration: none;
+  text-align: center;
+  align-items: center;
+  color: #ff4800;
+}
+
+.choose-video-btn i {
+  font-size: 2.5rem;
+  background-color: #fff;
+  padding: 2.2rem 2.7rem;
+  border-radius: 100%;
+
+  line-height: 0;
+}
+/* Animation left-right */
+
+@keyframes leftRifgtInfinite {
+  0% {
+    transform: translateX(-20px);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+/* Animation left-right */
+
+/* CHOOSE US Section END here  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* ALLNEWS Section START here  */
+
+.all-news-section {
+  padding: 5rem 0;
+}
+.all-news-top-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 7.5rem 0;
+}
+
+.all-news-top-btn {
+  border: none;
+  background-color: #ff4800;
+  color: #fff;
+  padding: 1.6rem 2.5rem;
+  border-radius: 0.5rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.all-news-top-btn:hover {
+  background-color: #03324d;
+}
+
+.all-news-card-container {
+  gap: 3rem;
+}
+
+.allnews-card-box {
+  box-shadow: 1px 1px 16px 6px #e8e8e8;
+}
+
+.allnews-card-image-box {
+  position: relative;
+  overflow: hidden;
+}
+
+.allnews-card-image-box img {
+  transition: all 400ms ease-out 0s;
+  position: relative;
+  z-index: -1;
+}
+
+.allnews-card-box:hover .allnews-card-image-box img {
+  transform: scale(1.2);
+}
+
+.all-news-date {
+  position: absolute;
+  bottom: 3rem;
+  right: 3rem;
+  background: #ff4800;
+  color: #fff;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.4rem;
+  transition: all 0.4s ease-in-out;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.all-news-date::after{
+  position: absolute;
+    right: 25px;
+    bottom: -15px;
+    content: "";
+    border-left: 15px solid #FF4800;
+    border-top: 0;
+    border-bottom: 15px solid transparent;
+}
+
+.all-news-date-entry {
+  font-size: 1.8rem;
+}
+
+.all-news-date-entry span {
+  font-weight: 800;
+}
+.allnews-card-content {
+  padding: 2rem 3rem;
+}
+.allnews-card-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 32px;
+  color: #03324d;
+  transition: all 0.3s ease;
+}
+
+.allnews-card-title:hover {
+  color: #ff4800;
+}
+
+.card-bottom-row {
+  border-bottom: 0.5px solid #a6a4a4;
+  margin-top: 1rem;
+  opacity: 0.5;
+}
+
+.card-bottom-content {
+  display: flex;
+  padding: 2rem 3rem;
+  justify-content: space-between;
+}
+
+.allnews-card-bottom-profile,
+.allnews-card-bottom-right {
+  display: flex;
+  align-items: center;
+}
+.allnews-card-bottom-profile img {
+  height: 5rem;
+  border: 2px solid #ff4800;
+  border-radius: 50px;
+}
+
+.allnews-card-bottom-profile img:hover {
+  transform: translate(1.2);
+}
+
+.card-bottom-designation {
+  margin-left: 1.2rem;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 26px;
+  color: #ff4800;
+}
+
+.allnews-card-bottom-right i {
+  font-size: 1.6rem;
+  color: #ff4800;
+}
+
+.allnews-comment {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 26px;
+  color: rgb(62, 62, 62);
+  margin-left: 1.2rem;
+}
+
+/* ALLNEWS  Section END here  */
+/* ***************************************** */
+
+/* ***************************************** */
+/* FOOTER US Section START here  */
+
+/* FOOTER US Section END here  */
 /* ***************************************** */
