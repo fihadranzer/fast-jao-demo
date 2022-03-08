@@ -577,6 +577,30 @@ body {
   color: #ff4800;
   line-height: 26px;
   text-decoration: none;
+  display: inline-block;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+
+
+.card-link-read-more::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15px;
+  width: 0;
+  height: 2px;
+  background-color: #ff4800;
+  transition: all 400ms ease-out 0s;
+}
+
+.card-box:hover .card-link-read-more::after {
+  width: 25px;
+}
+
+.card-box:hover .card-link-read-more{
+  padding-left: 3.5rem;
 }
 
 .card-thumb {
